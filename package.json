@@ -1,0 +1,21 @@
+{
+  "name": "@anio-js-foundation/node-fs-api",
+  "version": "1.0.0",
+  "description": "A node fs API that is consistent for both async and sync operation.",
+  "main": "./dist/package.mjs",
+  "author": "Anio Software <info@anio-software.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anio-js-foundation/node-fs-api.git"
+  },
+  "devDependencies": {
+    "@anio-js-foundation/bundle-package": "^3.1.2"
+  },
+  "scripts": {
+    "prepare": "./prepare.sh"
+  },
+  "files": [
+    "./dist/package.mjs"
+  ]
+}
