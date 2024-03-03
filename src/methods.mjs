@@ -6,6 +6,7 @@ import lstat from "./methods/lstat.mjs"
 import mkdir from "./methods/mkdir.mjs"
 import openDirectory from "./methods/openDirectory.mjs"
 import openFile from "./methods/openFile.mjs"
+import readFile from "./methods/readFile.mjs"
 import readdir from "./methods/readdir.mjs"
 import readlink from "./methods/readlink.mjs"
 import realpath from "./methods/realpath.mjs"
@@ -23,6 +24,7 @@ export default {
     mkdir,
     openDirectory,
     openFile,
+    readFile,
     readdir,
     readlink,
     realpath,
