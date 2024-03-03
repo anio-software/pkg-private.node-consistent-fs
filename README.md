@@ -1,9 +1,9 @@
-# @anio-js-foundation/node-fs-api
+# @anio-node-foundation/fs-api
 
 A node fs API that is consistent for both async and sync operation.
 
 ```js
-import createFSObject from "@anio-js-foundation/node-fs-api"
+import createFSObject from "@anio-node-foundation/fs-api"
 
 const {
 	chmod,
