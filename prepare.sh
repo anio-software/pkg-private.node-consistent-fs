@@ -2,4 +2,4 @@
 
 node generateMethodsIndexFile.mjs
 
-./node_modules/.bin/bundle-package .
+./node_modules/.bin/npm-package-bundler .

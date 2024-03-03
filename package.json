@@ -10,7 +10,7 @@
     "url": "git+https://github.com/anio-node-foundation/fs-api.git"
   },
   "devDependencies": {
-    "@anio-js-foundation/bundle-package": "^3.1.2"
+    "@anio-software/npm-package-bundler": "^1.0.0"
   },
   "scripts": {
     "prepare": "./prepare.sh"
