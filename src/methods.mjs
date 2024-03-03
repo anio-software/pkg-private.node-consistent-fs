@@ -15,6 +15,7 @@ import rmdir from "./methods/rmdir.mjs"
 import stat from "./methods/stat.mjs"
 import symlink from "./methods/symlink.mjs"
 import unlink from "./methods/unlink.mjs"
+import writeFile from "./methods/writeFile.mjs"
 
 export default {
     chmod,
@@ -33,4 +34,5 @@ export default {
     stat,
     symlink,
     unlink,
+    writeFile,
 }
