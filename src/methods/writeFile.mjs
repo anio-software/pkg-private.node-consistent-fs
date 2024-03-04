@@ -2,7 +2,7 @@ function sync_impl(fs, path, data) {
 	return fs.writeFileSync(path, data)
 }
 
-async function async_impl(fs, path) {
+async function async_impl(fs, path, data) {
 	return await fs.promises.writeFile(path, data)
 }
 
