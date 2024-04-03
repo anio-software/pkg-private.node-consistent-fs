@@ -3,7 +3,7 @@
 A node fs API that is consistent for both async and sync operation.
 
 ```js
-import createFSObject from "@anio-node-foundation/fs-api"
+import fs from "@anio-node-foundation/fs-api"
 
 const {
 	chmod,
@@ -21,7 +21,5 @@ const {
 	stat,
 	symlink,
 	unlink
-} = createFSObject({
-	sync: true
-})
+} = fs.sync
 ```

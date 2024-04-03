@@ -2,7 +2,7 @@ import fs_implementation from "node:fs"
 import process from "node:process"
 import methods from "./auto/methods.mjs"
 
-function createFSObject({
+export function createFSObject({
 	sync = false
 } = {}) {
 	let fs_object = {}
@@ -26,4 +26,10 @@ function createFSObject({
 	return fs_object
 }
 
-export default createFSObject
+const async_fs = createFSObject({sync: false})
+const sync_fs = createFSObject({sync: true})
+
+export const async = async_fs
+export const sync = sync_fs
+
+export default {async, sync}
