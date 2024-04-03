@@ -1,9 +1,9 @@
-# @anio-node-foundation/fs-api
+# @anio-fs/api
 
 A node fs API that is consistent for both async and sync operation.
 
 ```js
-import fs from "@anio-node-foundation/fs-api"
+import fs from "@anio-fs/api"
 
 const {
 	chmod,
