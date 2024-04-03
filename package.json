@@ -1,7 +1,7 @@
 {
   "name": "@anio-node-foundation/fs-api",
   "version": "3.0.0",
-  "description": "A node fs API that is consistent for both async and sync operation.",
+  "description": "Async/sync API for node's filesystem api.",
   "main": "./dist/package.min.mjs",
   "author": "Anio Software <info@anio.software>",
   "license": "MIT",
