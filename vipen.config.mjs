@@ -4,7 +4,7 @@ export default {
 	realm: "js",
 	type: "package",
 
-	preprocessing: [
-		generateMethodsIndexFile()
-	]
+	autogenerate: {
+		"methods.mjs": generateMethodsIndexFile()
+	}
 }

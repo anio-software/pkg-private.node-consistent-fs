@@ -1,6 +1,6 @@
 import fs_implementation from "node:fs"
 import process from "node:process"
-import methods from "./methods.mjs"
+import methods from "./auto/methods.mjs"
 
 function createFSObject({
 	sync = false
