@@ -72,26 +72,5 @@ export default function(output_file) {
 		}
 
 		return code
-
-		/*
-		let code = ``
-
-		code += `import fs from "node:fs"\n`
-
-		for (const method of methods) {
-			code += `import ${method}_impl from "../methods/${method}.mjs"\n`
-		}
-
-		for (const method of methods) {
-			let method_source = sync ? "sync_impl" : "async_impl"
-
-			code += `\n`
-			code += `export function ${method}(...args) {\n`
-			code += `    return ${method}_impl.${method_source}(fs, ...args);\n`
-			code += `}\n`
-		}
-
-		return code
-		*/
 	}
 }
