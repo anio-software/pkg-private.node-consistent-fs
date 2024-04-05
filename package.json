@@ -1,6 +1,6 @@
 {
   "name": "@anio-fs/api",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Async/sync API for node's filesystem api.",
   "main": "./dist/package.min.mjs",
   "exports": {
