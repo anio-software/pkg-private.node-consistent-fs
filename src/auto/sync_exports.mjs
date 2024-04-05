@@ -1,73 +1,22 @@
 import fs from "node:fs"
 
-import {
-    sync_impl as chmod__sync
-} from "../methods/chmod.mjs"
-
-import {
-    sync_impl as chown__sync
-} from "../methods/chown.mjs"
-
-import {
-    sync_impl as copyFile__sync
-} from "../methods/copyFile.mjs"
-
-import {
-    sync_impl as lstat__sync
-} from "../methods/lstat.mjs"
-
-import {
-    sync_impl as mkdir__sync
-} from "../methods/mkdir.mjs"
-
-import {
-    sync_impl as openDirectory__sync
-} from "../methods/openDirectory.mjs"
-
-import {
-    sync_impl as openFile__sync
-} from "../methods/openFile.mjs"
-
-import {
-    sync_impl as readFile__sync
-} from "../methods/readFile.mjs"
-
-import {
-    sync_impl as readdir__sync
-} from "../methods/readdir.mjs"
-
-import {
-    sync_impl as readlink__sync
-} from "../methods/readlink.mjs"
-
-import {
-    sync_impl as realpath__sync
-} from "../methods/realpath.mjs"
-
-import {
-    sync_impl as rename__sync
-} from "../methods/rename.mjs"
-
-import {
-    sync_impl as rmdir__sync
-} from "../methods/rmdir.mjs"
-
-import {
-    sync_impl as stat__sync
-} from "../methods/stat.mjs"
-
-import {
-    sync_impl as symlink__sync
-} from "../methods/symlink.mjs"
-
-import {
-    sync_impl as unlink__sync
-} from "../methods/unlink.mjs"
-
-import {
-    sync_impl as writeFile__sync
-} from "../methods/writeFile.mjs"
-
+import {sync_impl as chmod__sync} from "../methods/chmod.mjs"
+import {sync_impl as chown__sync} from "../methods/chown.mjs"
+import {sync_impl as copyFile__sync} from "../methods/copyFile.mjs"
+import {sync_impl as lstat__sync} from "../methods/lstat.mjs"
+import {sync_impl as mkdir__sync} from "../methods/mkdir.mjs"
+import {sync_impl as openDirectory__sync} from "../methods/openDirectory.mjs"
+import {sync_impl as openFile__sync} from "../methods/openFile.mjs"
+import {sync_impl as readFile__sync} from "../methods/readFile.mjs"
+import {sync_impl as readdir__sync} from "../methods/readdir.mjs"
+import {sync_impl as readlink__sync} from "../methods/readlink.mjs"
+import {sync_impl as realpath__sync} from "../methods/realpath.mjs"
+import {sync_impl as rename__sync} from "../methods/rename.mjs"
+import {sync_impl as rmdir__sync} from "../methods/rmdir.mjs"
+import {sync_impl as stat__sync} from "../methods/stat.mjs"
+import {sync_impl as symlink__sync} from "../methods/symlink.mjs"
+import {sync_impl as unlink__sync} from "../methods/unlink.mjs"
+import {sync_impl as writeFile__sync} from "../methods/writeFile.mjs"
 
 
 function debugLogMethod(method_name) {

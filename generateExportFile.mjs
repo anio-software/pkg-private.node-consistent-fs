@@ -9,15 +9,17 @@ async function getDefinedMethods(vipen_session) {
 }
 
 function generateImport(method, what) {
-	let code = `{\n`
+	let code = `{`
 
 	if (what === "both") {
+		code += `\n`
 		code += `    async_impl as ${method}__async,\n`
-		code += `    sync_impl as ${method}__sync\n`
+		code += `    sync_impl as ${method}__sync`
+		code += `\n`
 	} else if (what === "async") {
-		code += `    async_impl as ${method}__async\n`
+		code += `async_impl as ${method}__async`
 	} else if (what === "sync") {
-		code += `    sync_impl as ${method}__sync\n`
+		code += `sync_impl as ${method}__sync`
 	}
 
 	code += `}`
@@ -41,7 +43,9 @@ export default function(output_file) {
 		code += `import fs from "node:fs"\n\n`
 
 		for (const method of methods) {
-			code += `import ${generateImport(method, what)} from "../methods/${method}.mjs"\n\n`
+			code += `import ${generateImport(method, what)} from "../methods/${method}.mjs"\n`
+
+			if (what === "both") code += "\n"
 		}
 
 		code += `\n\n`

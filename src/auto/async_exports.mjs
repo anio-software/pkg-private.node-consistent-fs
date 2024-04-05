@@ -1,73 +1,22 @@
 import fs from "node:fs"
 
-import {
-    async_impl as chmod__async
-} from "../methods/chmod.mjs"
-
-import {
-    async_impl as chown__async
-} from "../methods/chown.mjs"
-
-import {
-    async_impl as copyFile__async
-} from "../methods/copyFile.mjs"
-
-import {
-    async_impl as lstat__async
-} from "../methods/lstat.mjs"
-
-import {
-    async_impl as mkdir__async
-} from "../methods/mkdir.mjs"
-
-import {
-    async_impl as openDirectory__async
-} from "../methods/openDirectory.mjs"
-
-import {
-    async_impl as openFile__async
-} from "../methods/openFile.mjs"
-
-import {
-    async_impl as readFile__async
-} from "../methods/readFile.mjs"
-
-import {
-    async_impl as readdir__async
-} from "../methods/readdir.mjs"
-
-import {
-    async_impl as readlink__async
-} from "../methods/readlink.mjs"
-
-import {
-    async_impl as realpath__async
-} from "../methods/realpath.mjs"
-
-import {
-    async_impl as rename__async
-} from "../methods/rename.mjs"
-
-import {
-    async_impl as rmdir__async
-} from "../methods/rmdir.mjs"
-
-import {
-    async_impl as stat__async
-} from "../methods/stat.mjs"
-
-import {
-    async_impl as symlink__async
-} from "../methods/symlink.mjs"
-
-import {
-    async_impl as unlink__async
-} from "../methods/unlink.mjs"
-
-import {
-    async_impl as writeFile__async
-} from "../methods/writeFile.mjs"
-
+import {async_impl as chmod__async} from "../methods/chmod.mjs"
+import {async_impl as chown__async} from "../methods/chown.mjs"
+import {async_impl as copyFile__async} from "../methods/copyFile.mjs"
+import {async_impl as lstat__async} from "../methods/lstat.mjs"
+import {async_impl as mkdir__async} from "../methods/mkdir.mjs"
+import {async_impl as openDirectory__async} from "../methods/openDirectory.mjs"
+import {async_impl as openFile__async} from "../methods/openFile.mjs"
+import {async_impl as readFile__async} from "../methods/readFile.mjs"
+import {async_impl as readdir__async} from "../methods/readdir.mjs"
+import {async_impl as readlink__async} from "../methods/readlink.mjs"
+import {async_impl as realpath__async} from "../methods/realpath.mjs"
+import {async_impl as rename__async} from "../methods/rename.mjs"
+import {async_impl as rmdir__async} from "../methods/rmdir.mjs"
+import {async_impl as stat__async} from "../methods/stat.mjs"
+import {async_impl as symlink__async} from "../methods/symlink.mjs"
+import {async_impl as unlink__async} from "../methods/unlink.mjs"
+import {async_impl as writeFile__async} from "../methods/writeFile.mjs"
 
 
 function debugLogMethod(method_name) {
