@@ -1,4 +1,4 @@
-function sync_impl(fs, path) {
+export function sync_impl(fs, path) {
 	const handle = fs.opendirSync(path)
 
 	return {
@@ -11,7 +11,7 @@ function sync_impl(fs, path) {
 	}
 }
 
-async function async_impl(fs, path) {
+export async function async_impl(fs, path) {
 	const handle = await fs.promises.opendir(path)
 
 	return {
@@ -23,5 +23,3 @@ async function async_impl(fs, path) {
 		}
 	}
 }
-
-export default {sync_impl, async_impl}

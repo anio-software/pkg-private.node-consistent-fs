@@ -1,4 +1,4 @@
-function sync_impl(fs, path, flags = "r", mode = 0o666) {
+export function sync_impl(fs, path, flags = "r", mode = 0o666) {
 	const fd = fs.openSync(path, flags, mode)
 
 	return {
@@ -14,7 +14,7 @@ function sync_impl(fs, path, flags = "r", mode = 0o666) {
 	}
 }
 
-async function async_impl(fs, path, flags = "r", mode = 0o666) {
+export async function async_impl(fs, path, flags = "r", mode = 0o666) {
 	const handle = await fs.promises.open(path, flags, mode)
 
 	return {
@@ -33,5 +33,3 @@ async function async_impl(fs, path, flags = "r", mode = 0o666) {
 		}
 	}
 }
-
-export default {sync_impl, async_impl}

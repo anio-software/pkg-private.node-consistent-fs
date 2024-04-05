@@ -1,22 +1,73 @@
 import fs from "node:fs"
 
-import chmod_module from "../methods/chmod.mjs"
-import chown_module from "../methods/chown.mjs"
-import copyFile_module from "../methods/copyFile.mjs"
-import lstat_module from "../methods/lstat.mjs"
-import mkdir_module from "../methods/mkdir.mjs"
-import openDirectory_module from "../methods/openDirectory.mjs"
-import openFile_module from "../methods/openFile.mjs"
-import readFile_module from "../methods/readFile.mjs"
-import readdir_module from "../methods/readdir.mjs"
-import readlink_module from "../methods/readlink.mjs"
-import realpath_module from "../methods/realpath.mjs"
-import rename_module from "../methods/rename.mjs"
-import rmdir_module from "../methods/rmdir.mjs"
-import stat_module from "../methods/stat.mjs"
-import symlink_module from "../methods/symlink.mjs"
-import unlink_module from "../methods/unlink.mjs"
-import writeFile_module from "../methods/writeFile.mjs"
+import {
+    async_impl as chmod__async
+} from "../methods/chmod.mjs"
+
+import {
+    async_impl as chown__async
+} from "../methods/chown.mjs"
+
+import {
+    async_impl as copyFile__async
+} from "../methods/copyFile.mjs"
+
+import {
+    async_impl as lstat__async
+} from "../methods/lstat.mjs"
+
+import {
+    async_impl as mkdir__async
+} from "../methods/mkdir.mjs"
+
+import {
+    async_impl as openDirectory__async
+} from "../methods/openDirectory.mjs"
+
+import {
+    async_impl as openFile__async
+} from "../methods/openFile.mjs"
+
+import {
+    async_impl as readFile__async
+} from "../methods/readFile.mjs"
+
+import {
+    async_impl as readdir__async
+} from "../methods/readdir.mjs"
+
+import {
+    async_impl as readlink__async
+} from "../methods/readlink.mjs"
+
+import {
+    async_impl as realpath__async
+} from "../methods/realpath.mjs"
+
+import {
+    async_impl as rename__async
+} from "../methods/rename.mjs"
+
+import {
+    async_impl as rmdir__async
+} from "../methods/rmdir.mjs"
+
+import {
+    async_impl as stat__async
+} from "../methods/stat.mjs"
+
+import {
+    async_impl as symlink__async
+} from "../methods/symlink.mjs"
+
+import {
+    async_impl as unlink__async
+} from "../methods/unlink.mjs"
+
+import {
+    async_impl as writeFile__async
+} from "../methods/writeFile.mjs"
+
 
 
 function debugLogMethod(method_name) {
@@ -27,86 +78,86 @@ function debugLogMethod(method_name) {
 
 export function chmod(...args) {
     debugLogMethod("fs/async:chmod");
-    return chmod_module.async_impl(fs, ...args);
+    return chmod__async(fs, ...args);
 }
 
 export function chown(...args) {
     debugLogMethod("fs/async:chown");
-    return chown_module.async_impl(fs, ...args);
+    return chown__async(fs, ...args);
 }
 
 export function copyFile(...args) {
     debugLogMethod("fs/async:copyFile");
-    return copyFile_module.async_impl(fs, ...args);
+    return copyFile__async(fs, ...args);
 }
 
 export function lstat(...args) {
     debugLogMethod("fs/async:lstat");
-    return lstat_module.async_impl(fs, ...args);
+    return lstat__async(fs, ...args);
 }
 
 export function mkdir(...args) {
     debugLogMethod("fs/async:mkdir");
-    return mkdir_module.async_impl(fs, ...args);
+    return mkdir__async(fs, ...args);
 }
 
 export function openDirectory(...args) {
     debugLogMethod("fs/async:openDirectory");
-    return openDirectory_module.async_impl(fs, ...args);
+    return openDirectory__async(fs, ...args);
 }
 
 export function openFile(...args) {
     debugLogMethod("fs/async:openFile");
-    return openFile_module.async_impl(fs, ...args);
+    return openFile__async(fs, ...args);
 }
 
 export function readFile(...args) {
     debugLogMethod("fs/async:readFile");
-    return readFile_module.async_impl(fs, ...args);
+    return readFile__async(fs, ...args);
 }
 
 export function readdir(...args) {
     debugLogMethod("fs/async:readdir");
-    return readdir_module.async_impl(fs, ...args);
+    return readdir__async(fs, ...args);
 }
 
 export function readlink(...args) {
     debugLogMethod("fs/async:readlink");
-    return readlink_module.async_impl(fs, ...args);
+    return readlink__async(fs, ...args);
 }
 
 export function realpath(...args) {
     debugLogMethod("fs/async:realpath");
-    return realpath_module.async_impl(fs, ...args);
+    return realpath__async(fs, ...args);
 }
 
 export function rename(...args) {
     debugLogMethod("fs/async:rename");
-    return rename_module.async_impl(fs, ...args);
+    return rename__async(fs, ...args);
 }
 
 export function rmdir(...args) {
     debugLogMethod("fs/async:rmdir");
-    return rmdir_module.async_impl(fs, ...args);
+    return rmdir__async(fs, ...args);
 }
 
 export function stat(...args) {
     debugLogMethod("fs/async:stat");
-    return stat_module.async_impl(fs, ...args);
+    return stat__async(fs, ...args);
 }
 
 export function symlink(...args) {
     debugLogMethod("fs/async:symlink");
-    return symlink_module.async_impl(fs, ...args);
+    return symlink__async(fs, ...args);
 }
 
 export function unlink(...args) {
     debugLogMethod("fs/async:unlink");
-    return unlink_module.async_impl(fs, ...args);
+    return unlink__async(fs, ...args);
 }
 
 export function writeFile(...args) {
     debugLogMethod("fs/async:writeFile");
-    return writeFile_module.async_impl(fs, ...args);
+    return writeFile__async(fs, ...args);
 }
 

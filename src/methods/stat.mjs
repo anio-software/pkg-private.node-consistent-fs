@@ -1,9 +1,7 @@
-function sync_impl(fs, path) {
+export function sync_impl(fs, path) {
 	return fs.statSync(path)
 }
 
-async function async_impl(fs, path) {
+export async function async_impl(fs, path) {
 	return await fs.promises.stat(path)
 }
-
-export default {sync_impl, async_impl}
