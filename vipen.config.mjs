@@ -1,3 +1,4 @@
+import generateTypesFile from "./generateTypesFile.mjs"
 import generateExportFile from "./generateExportFile.mjs"
 
 export default {
@@ -12,6 +13,7 @@ export default {
 	},
 
 	autogenerate: {
+		"types.d.ts": generateTypesFile(),
 		"exports.mjs": generateExportFile("index.mjs"),
 		"sync_exports.mjs": generateExportFile("sync.mjs"),
 		"async_exports.mjs": generateExportFile("async.mjs")
