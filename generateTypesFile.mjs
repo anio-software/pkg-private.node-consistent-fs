@@ -8,14 +8,49 @@ async function getDefinedMethods(vipen_session) {
 	return methods
 }
 
-export default function() {
+function ucfirst(str) {
+	return str.slice(0, 1).toUpperCase() + str.slice(1)
+}
+
+export default function(export_kind) {
 	return async function(vipen_session) {
 		const methods = await getDefinedMethods(vipen_session)
 		let types = ""
 
-		for (const method of methods) {
-			types += `export function ${method}(...args : any[]) : Promise<any>\n`
-			types += `export function ${method}Sync(...args : any[]) : any\n`
+		const args_type = `...args: any[]`
+		const fns = []
+
+		// async export
+		if (export_kind === "async") {
+			for (const method of methods) {
+				types += `export type ${ucfirst(method)}AsyncType = async (${args_type}) => {} : any\n`
+
+				fns.push([method + "Async", ucfirst(method) + "AsyncType"])
+				fns.push([method, ucfirst(method) + "AsyncType"])
+			}
+		}
+		// sync export
+		else if (export_kind === "sync") {
+			for (const method of methods) {
+				types += `export type ${ucfirst(method)}SyncType = (${args_type}) => {} : any\n`
+
+				fns.push([method + "Sync", ucfirst(method) + "SyncType"])
+				fns.push([method, ucfirst(method) + "SyncType"])
+			}
+		}
+		// default export
+		else {
+			for (const method of methods) {
+				types += `export type ${ucfirst(method)}SyncType = (${args_type}) => {} : any\n`
+				types += `export type ${ucfirst(method)}AsyncType = async (${args_type}) => {} : any\n`
+
+				fns.push([method + "Async", ucfirst(method) + "AsyncType"])
+				fns.push([method + "Sync", ucfirst(method) + "SyncType"])
+			}
+		}
+
+		for (const [name, type] of fns) {
+			types += `export const ${name} : ${type}\n`
 		}
 
 		return types
