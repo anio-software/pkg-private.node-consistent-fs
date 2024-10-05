@@ -1,8 +1,8 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-async function getDefinedMethods(vipen_session) {
-	const methods_files = await fs.readdir(path.join(vipen_session.getProjectRoot(), "src", "methods"))
+async function getDefinedMethods(fourtune_session) {
+	const methods_files = await fs.readdir(path.join(fourtune_session.getProjectRoot(), "src", "methods"))
 	const methods = methods_files.map(file => file.slice(0, file.length - 4))
 
 	return methods
@@ -39,8 +39,8 @@ function exportMethod(method_name, impl) {
 }
 
 export default function(export_kind) {
-	return async function(vipen_session) {
-		const methods = await getDefinedMethods(vipen_session)
+	return async function(fourtune_session) {
+		const methods = await getDefinedMethods(fourtune_session)
 		let code = ``
 
 		code += `import fs from "node:fs"\n\n`
