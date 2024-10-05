@@ -1,20 +1,20 @@
-export type ChmodAsyncType = async (...args: any[]) => {} : any
-export type ChownAsyncType = async (...args: any[]) => {} : any
-export type CopyFileAsyncType = async (...args: any[]) => {} : any
-export type LstatAsyncType = async (...args: any[]) => {} : any
-export type MkdirAsyncType = async (...args: any[]) => {} : any
-export type OpenDirectoryAsyncType = async (...args: any[]) => {} : any
-export type OpenFileAsyncType = async (...args: any[]) => {} : any
-export type ReadFileAsyncType = async (...args: any[]) => {} : any
-export type ReaddirAsyncType = async (...args: any[]) => {} : any
-export type ReadlinkAsyncType = async (...args: any[]) => {} : any
-export type RealpathAsyncType = async (...args: any[]) => {} : any
-export type RenameAsyncType = async (...args: any[]) => {} : any
-export type RmdirAsyncType = async (...args: any[]) => {} : any
-export type StatAsyncType = async (...args: any[]) => {} : any
-export type SymlinkAsyncType = async (...args: any[]) => {} : any
-export type UnlinkAsyncType = async (...args: any[]) => {} : any
-export type WriteFileAsyncType = async (...args: any[]) => {} : any
+export type ChmodAsyncType = (...args: any[]) => Promise<any>
+export type ChownAsyncType = (...args: any[]) => Promise<any>
+export type CopyFileAsyncType = (...args: any[]) => Promise<any>
+export type LstatAsyncType = (...args: any[]) => Promise<any>
+export type MkdirAsyncType = (...args: any[]) => Promise<any>
+export type OpenDirectoryAsyncType = (...args: any[]) => Promise<any>
+export type OpenFileAsyncType = (...args: any[]) => Promise<any>
+export type ReadFileAsyncType = (...args: any[]) => Promise<any>
+export type ReaddirAsyncType = (...args: any[]) => Promise<any>
+export type ReadlinkAsyncType = (...args: any[]) => Promise<any>
+export type RealpathAsyncType = (...args: any[]) => Promise<any>
+export type RenameAsyncType = (...args: any[]) => Promise<any>
+export type RmdirAsyncType = (...args: any[]) => Promise<any>
+export type StatAsyncType = (...args: any[]) => Promise<any>
+export type SymlinkAsyncType = (...args: any[]) => Promise<any>
+export type UnlinkAsyncType = (...args: any[]) => Promise<any>
+export type WriteFileAsyncType = (...args: any[]) => Promise<any>
 export const chmodAsync : ChmodAsyncType
 export const chmod : ChmodAsyncType
 export const chownAsync : ChownAsyncType

@@ -1,20 +1,20 @@
-export type ChmodSyncType = (...args: any[]) => {} : any
-export type ChownSyncType = (...args: any[]) => {} : any
-export type CopyFileSyncType = (...args: any[]) => {} : any
-export type LstatSyncType = (...args: any[]) => {} : any
-export type MkdirSyncType = (...args: any[]) => {} : any
-export type OpenDirectorySyncType = (...args: any[]) => {} : any
-export type OpenFileSyncType = (...args: any[]) => {} : any
-export type ReadFileSyncType = (...args: any[]) => {} : any
-export type ReaddirSyncType = (...args: any[]) => {} : any
-export type ReadlinkSyncType = (...args: any[]) => {} : any
-export type RealpathSyncType = (...args: any[]) => {} : any
-export type RenameSyncType = (...args: any[]) => {} : any
-export type RmdirSyncType = (...args: any[]) => {} : any
-export type StatSyncType = (...args: any[]) => {} : any
-export type SymlinkSyncType = (...args: any[]) => {} : any
-export type UnlinkSyncType = (...args: any[]) => {} : any
-export type WriteFileSyncType = (...args: any[]) => {} : any
+export type ChmodSyncType = (...args: any[]) => any
+export type ChownSyncType = (...args: any[]) => any
+export type CopyFileSyncType = (...args: any[]) => any
+export type LstatSyncType = (...args: any[]) => any
+export type MkdirSyncType = (...args: any[]) => any
+export type OpenDirectorySyncType = (...args: any[]) => any
+export type OpenFileSyncType = (...args: any[]) => any
+export type ReadFileSyncType = (...args: any[]) => any
+export type ReaddirSyncType = (...args: any[]) => any
+export type ReadlinkSyncType = (...args: any[]) => any
+export type RealpathSyncType = (...args: any[]) => any
+export type RenameSyncType = (...args: any[]) => any
+export type RmdirSyncType = (...args: any[]) => any
+export type StatSyncType = (...args: any[]) => any
+export type SymlinkSyncType = (...args: any[]) => any
+export type UnlinkSyncType = (...args: any[]) => any
+export type WriteFileSyncType = (...args: any[]) => any
 export const chmodSync : ChmodSyncType
 export const chmod : ChmodSyncType
 export const chownSync : ChownSyncType

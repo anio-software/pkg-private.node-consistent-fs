@@ -23,7 +23,7 @@ export default function(export_kind) {
 		// async export
 		if (export_kind === "async") {
 			for (const method of methods) {
-				types += `export type ${ucfirst(method)}AsyncType = async (${args_type}) => {} : any\n`
+				types += `export type ${ucfirst(method)}AsyncType = (${args_type}) => Promise<any>\n`
 
 				fns.push([method + "Async", ucfirst(method) + "AsyncType"])
 				fns.push([method, ucfirst(method) + "AsyncType"])
@@ -32,7 +32,7 @@ export default function(export_kind) {
 		// sync export
 		else if (export_kind === "sync") {
 			for (const method of methods) {
-				types += `export type ${ucfirst(method)}SyncType = (${args_type}) => {} : any\n`
+				types += `export type ${ucfirst(method)}SyncType = (${args_type}) => any\n`
 
 				fns.push([method + "Sync", ucfirst(method) + "SyncType"])
 				fns.push([method, ucfirst(method) + "SyncType"])
@@ -41,8 +41,8 @@ export default function(export_kind) {
 		// default export
 		else {
 			for (const method of methods) {
-				types += `export type ${ucfirst(method)}SyncType = (${args_type}) => {} : any\n`
-				types += `export type ${ucfirst(method)}AsyncType = async (${args_type}) => {} : any\n`
+				types += `export type ${ucfirst(method)}SyncType = (${args_type}) => any\n`
+				types += `export type ${ucfirst(method)}AsyncType = (${args_type}) => Promise<any>\n`
 
 				fns.push([method + "Async", ucfirst(method) + "AsyncType"])
 				fns.push([method + "Sync", ucfirst(method) + "SyncType"])
