@@ -17,8 +17,8 @@ export default {
 		"types/sync.d.mts": generateTypesFile("sync"),
 		"types/default.d.mts": generateTypesFile("default"),
 
-		"exports.mjs": generateExportFile("index.mjs"),
-		"sync_exports.mjs": generateExportFile("sync.mjs"),
-		"async_exports.mjs": generateExportFile("async.mjs")
+		"async_export.mjs": generateExportFile("async"),
+		"sync_export.mjs": generateExportFile("sync"),
+		"default_export.mjs": generateExportFile("default")
 	}
 }

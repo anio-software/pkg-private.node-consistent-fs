@@ -8,17 +8,17 @@ async function getDefinedMethods(vipen_session) {
 	return methods
 }
 
-function generateImport(method, what) {
+function generateImport(method, export_kind) {
 	let code = `{`
 
-	if (what === "both") {
+	if (export_kind === "default") {
 		code += `\n`
 		code += `    async_impl as ${method}__async,\n`
 		code += `    sync_impl as ${method}__sync`
 		code += `\n`
-	} else if (what === "async") {
+	} else if (export_kind === "async") {
 		code += `async_impl as ${method}__async`
-	} else if (what === "sync") {
+	} else if (export_kind === "sync") {
 		code += `sync_impl as ${method}__sync`
 	}
 
@@ -27,15 +27,18 @@ function generateImport(method, what) {
 	return code
 }
 
-export default function(output_file) {
-	const map = {
-		"index.mjs": "both",
-		"async.mjs": "async",
-		"sync.mjs": "sync"
-	}
+function exportMethod(method_name, impl) {
+	let code = ``
 
-	const what = map[output_file]
+	code += `export function ${method_name}(...args) {\n`
+	code += `    debugLogMethod("fs:${method_name}->${impl}");\n`
+	code += `    return ${impl}(fs, ...args);\n`
+	code += `}\n`
 
+	return code
+}
+
+export default function(export_kind) {
 	return async function(vipen_session) {
 		const methods = await getDefinedMethods(vipen_session)
 		let code = ``
@@ -43,9 +46,9 @@ export default function(output_file) {
 		code += `import fs from "node:fs"\n\n`
 
 		for (const method of methods) {
-			code += `import ${generateImport(method, what)} from "../methods/${method}.mjs"\n`
+			code += `import ${generateImport(method, export_kind)} from "../methods/${method}.mjs"\n`
 
-			if (what === "both") code += "\n"
+			if (export_kind === "default") code += "\n"
 		}
 
 		code += `\n\n`
@@ -58,46 +61,24 @@ export default function(output_file) {
 
 		code += `\n\n`
 
-		switch (output_file) {
-			case "index.mjs": {
-				for (const method of methods) {
-					code += `export function ${method}(...args) {\n`
-					code += `    debugLogMethod("fs:${method}");\n`
-					code += `    return ${method}__async(fs, ...args);\n`
-					code += `}\n`
-
-					code += `\n`
-
-					code += `export function ${method}Sync(...args) {\n`
-					code += `    debugLogMethod("fs:${method}Sync");\n`
-					code += `    return ${method}__sync(fs, ...args);\n`
-					code += `}\n`
-
-					code += `\n`
-				}
-			} break
-
-			case "sync.mjs": {
-				for (const method of methods) {
-					code += `export function ${method}(...args) {\n`
-					code += `    debugLogMethod("fs/sync:${method}");\n`
-					code += `    return ${method}__sync(fs, ...args);\n`
-					code += `}\n`
-
-					code += `\n`
-				}
-			} break
-
-			case "async.mjs": {
-				for (const method of methods) {
-					code += `export function ${method}(...args) {\n`
-					code += `    debugLogMethod("fs/async:${method}");\n`
-					code += `    return ${method}__async(fs, ...args);\n`
-					code += `}\n`
-
-					code += `\n`
-				}
-			} break
+		if (export_kind === "async") {
+			for (const method of methods) {
+				code += exportMethod(method + "Async", method + "__async")
+				code += exportMethod(method, method + "__async")
+			}
+		}
+		else if (export_kind === "sync") {
+			for (const method of methods) {
+				code += exportMethod(method + "Sync", method + "__sync")
+				code += exportMethod(method, method + "__sync")
+			}
+		}
+		// default export
+		else {
+			for (const method of methods) {
+				code += exportMethod(method + "Sync", method + "__sync")
+				code += exportMethod(method + "Async", method + "__async")
+			}
 		}
 
 		return code
