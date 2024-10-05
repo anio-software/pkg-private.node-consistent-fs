@@ -3,7 +3,13 @@
   "version": "6.0.2",
   "description": "Async/sync API for node's filesystem api.",
   "main": "./dist/package.min.mjs",
-  "typings": "./dist/index.d.ts",
+  "types": "./dist/default/index.d.mts",
+  "typesVersions": {
+    "*": {
+      "async": ["./dist/async/index.d.mts"],
+      "sync": ["./dist/sync/index.d.mts"]
+    }
+  },
   "exports": {
     ".": "./dist/package.min.mjs",
     "./async": "./dist/additional_entry_points/async/package.min.mjs",
