@@ -5,13 +5,6 @@ export default {
 	realm: "js",
 	type: "package",
 
-	target: {
-		additional_entry_points: {
-			"async": "src/entries/async.mjs",
-			"sync": "src/entries/sync.mjs"
-		}
-	},
-
 	autogenerate: {
 		"types/async.d.mts": generateTypesFile("async"),
 		"types/sync.d.mts": generateTypesFile("sync"),
