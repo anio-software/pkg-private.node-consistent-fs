@@ -2,7 +2,7 @@
   "name": "@anio-fs/api",
   "version": "6.0.2",
   "description": "Async/sync API for node's filesystem api.",
-  "main": "./dist/package.min.mjs",
+  "main": "./dist/default/index.min.mjs",
   "types": "./dist/default/index.d.mts",
   "typesVersions": {
     "*": {
@@ -11,9 +11,9 @@
     }
   },
   "exports": {
-    ".": "./dist/package.min.mjs",
-    "./async": "./dist/additional_entry_points/async/package.min.mjs",
-    "./sync": "./dist/additional_entry_points/sync/package.min.mjs"
+    ".": "./dist/default/index.min.mjs",
+    "./async": "./dist/async/index.min.mjs",
+    "./sync": "./dist/sync/index.min.mjs"
   },
   "author": "Anio Software <info@anio.software>",
   "license": "MIT",
