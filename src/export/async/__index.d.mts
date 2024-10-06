@@ -1,1 +1,1 @@
-export * from "../../auto/types/async.d.mts"
+export type * from "../../auto/types/async.d.mts"

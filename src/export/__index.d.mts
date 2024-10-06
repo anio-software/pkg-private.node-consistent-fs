@@ -1,1 +1,1 @@
-export * from "../auto/types/default.d.mts"
+export type * from "../auto/types/default.d.mts"
