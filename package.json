@@ -3,18 +3,19 @@
   "type": "module",
   "version": "6.0.2",
   "description": "Async/sync API for node's filesystem api.",
-  "main": "./dist/default/index.min.mjs",
-  "types": "./dist/default/index.d.mts",
-  "typesVersions": {
-    "*": {
-      "async": ["./dist/async/index.d.mts"],
-      "sync": ["./dist/sync/index.d.mts"]
-    }
-  },
   "exports": {
-    ".": "./dist/default/index.min.mjs",
-    "./async": "./dist/async/index.min.mjs",
-    "./sync": "./dist/sync/index.min.mjs"
+    ".": {
+      "import": "./dist/default/index.min.mjs",
+      "types": "./dist/default/index.d.mts"
+    },
+    "./async": {
+      "import": "./dist/async/index.min.mjs",
+      "types": "./dist/async/index.d.mts"
+    },
+    "./sync": {
+      "import": "./dist/sync/index.min.mjs",
+      "types": "./dist/sync/index.d.mts"
+    }
   },
   "author": "Anio Software <info@anio.software>",
   "license": "MIT",
