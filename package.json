@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@fourtune/realm-js": "^0.10.1",
-    "fourtune": "^0.5.1"
+    "fourtune": "^0.5.2"
   },
   "scripts": {
     "prepare": "./node_modules/.bin/fourtune ."
