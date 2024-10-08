@@ -30,9 +30,9 @@ function generateImport(method, export_kind) {
 function exportMethod(method_name, impl) {
 	let code = ``
 
-	code += `export function ${method_name}(...args) {\n`
+	code += `export function ${method_name}(...args: Parameters<typeof ${impl}>) : ReturnType<typeof ${impl}> {\n`
 	code += `    debugLogMethod("fs:${method_name}->${impl}");\n`
-	code += `    return ${impl}(fs, ...args);\n`
+	code += `    return ${impl}(...args);\n`
 	code += `}\n`
 
 	return code
@@ -43,17 +43,17 @@ export default function(export_kind) {
 		const methods = await getDefinedMethods(fourtune_session)
 		let code = ``
 
-		code += `import fs from "node:fs"\n\n`
+		code += `import process from "node:process"\n\n`
 
 		for (const method of methods) {
-			code += `import ${generateImport(method, export_kind)} from "../methods/${method}.mjs"\n`
+			code += `import ${generateImport(method, export_kind)} from "../../../methods/${method}.mts"\n`
 
 			if (export_kind === "default") code += "\n"
 		}
 
 		code += `\n\n`
 
-		code += `function debugLogMethod(method_name) {\n`
+		code += `function debugLogMethod(method_name : string) : void {\n`
 		code += `    if (!process.env || !process.stderr) return\n`
 		code += `    if (!("ANIO_NODE_FS_API_DEBUG" in process.env)) return\n`
 		code += `    process.stderr.write("@anio-fs/api method call " + method_name + "\\n");\n`
@@ -79,6 +79,19 @@ export default function(export_kind) {
 				code += exportMethod(method + "Sync", method + "__sync")
 				code += exportMethod(method + "Async", method + "__async")
 			}
+
+			code += `export const fs = {\n`
+			code += `    sync: {\n`
+			for (const method of methods) {
+				code += `        ${method}: ${method}Sync,\n`
+			}
+			code += `    },\n`
+			code += `    async: {\n`
+			for (const method of methods) {
+				code += `        ${method}: ${method}Async,\n`
+			}
+			code += `    }\n`
+			code += `}`
 		}
 
 		return code
