@@ -1,4 +1,3 @@
-import generateTypesFile from "./generateTypesFile.mjs"
 import generateExportFile from "./generateExportFile.mjs"
 
 export default {
@@ -6,12 +5,8 @@ export default {
 	type: "package",
 
 	autogenerate: {
-		"types/async.d.mts": generateTypesFile("async"),
-		"types/sync.d.mts": generateTypesFile("sync"),
-		"types/default.d.mts": generateTypesFile("default"),
-
-		"async_export.mjs": generateExportFile("async"),
-		"sync_export.mjs": generateExportFile("sync"),
-		"default_export.mjs": generateExportFile("default")
+		"export/async/__index.mts": generateExportFile("async"),
+		"export/sync/__index.mts": generateExportFile("sync"),
+		"export/default/__index.mts": generateExportFile("default")
 	}
 }
