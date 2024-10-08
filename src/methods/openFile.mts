@@ -1,34 +1,36 @@
-export function sync_impl(fs, path, flags = "r", mode = 0o666) {
+import fs from "node:fs"
+
+export function sync_impl(path : string, flags : string = "r", mode : number = 0o666) {
 	const fd = fs.openSync(path, flags, mode)
 
 	return {
-		read(buffer) {
+		read(buffer : Buffer) {
 			return fs.readSync(fd, buffer)
 		},
-		write(buffer) {
+		write(buffer : Buffer) {
 			return fs.writeSync(fd, buffer)
 		},
-		close() {
+		close() : void {
 			fs.closeSync(fd)
 		}
 	}
 }
 
-export async function async_impl(fs, path, flags = "r", mode = 0o666) {
+export async function async_impl(path : string, flags : string = "r", mode : number = 0o666) {
 	const handle = await fs.promises.open(path, flags, mode)
 
 	return {
-		async read(buffer) {
+		async read(buffer : Buffer) {
 			const {bytesRead} = await handle.read(buffer, 0, buffer.byteLength, null)
 
 			return bytesRead
 		},
-		async write(buffer) {
+		async write(buffer : Buffer) {
 			const {bytesWritten} = await handle.write(buffer)
 
 			return bytesWritten
 		},
-		async close() {
+		async close() : Promise<void> {
 			await handle.close()
 		}
 	}

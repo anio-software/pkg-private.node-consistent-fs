@@ -1,7 +1,9 @@
-export function sync_impl(fs, path, data) {
-	return fs.writeFileSync(path, data)
+import fs from "node:fs"
+
+export function sync_impl(path : string, data : Buffer|string) : void {
+	fs.writeFileSync(path, data)
 }
 
-export async function async_impl(fs, path, data) {
-	return await fs.promises.writeFile(path, data)
+export async function async_impl(path : string, data : Buffer|string) : Promise<ReturnType<typeof sync_impl>> {
+	await fs.promises.writeFile(path, data)
 }
