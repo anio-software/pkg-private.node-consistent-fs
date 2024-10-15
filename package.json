@@ -24,7 +24,7 @@
     "url": "git+https://github.com/anio-fs-org/api.git"
   },
   "devDependencies": {
-    "@fourtune/realm-js": "^0.17.1",
+    "@fourtune/realm-js": "^0.25.1",
     "fourtune": "^0.18.0"
   },
   "scripts": {
