@@ -2,4 +2,5 @@
 /.fourtune/
 /node_modules/
 /build/
+/objects/
 /dist/
