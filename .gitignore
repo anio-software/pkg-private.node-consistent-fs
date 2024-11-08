@@ -1,6 +1,4 @@
 .DS_Store
 /.fourtune/
 /node_modules/
-/build/
-/objects/
 /dist/
