@@ -5,8 +5,8 @@ export default {
 	type: "package",
 
 	autogenerate: {
-		"export/async/__star_export.mts": generateExportFile("async"),
-		"export/sync/__star_export.mts": generateExportFile("sync"),
-		"export/default/__star_export.mts": generateExportFile("default")
+		"src/export/async/__star_export.mts": generateExportFile("async"),
+		"src/export/sync/__star_export.mts": generateExportFile("sync"),
+		"src/export/default/__star_export.mts": generateExportFile("default")
 	}
 }
