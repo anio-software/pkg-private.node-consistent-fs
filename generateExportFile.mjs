@@ -46,7 +46,7 @@ export default function(export_kind) {
 		code += `import process from "node:process"\n\n`
 
 		for (const method of methods) {
-			code += `import ${generateImport(method, export_kind)} from "../../../methods/${method}.mts"\n`
+			code += `import ${generateImport(method, export_kind)} from "#~src/methods/${method}.mts"\n`
 
 			if (export_kind === "default") code += "\n"
 		}

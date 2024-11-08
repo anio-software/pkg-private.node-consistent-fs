@@ -3,87 +3,87 @@ import process from "node:process"
 import {
     async_impl as chmod__async,
     sync_impl as chmod__sync
-} from "../../../methods/chmod.mts"
+} from "#~src/methods/chmod.mts"
 
 import {
     async_impl as chown__async,
     sync_impl as chown__sync
-} from "../../../methods/chown.mts"
+} from "#~src/methods/chown.mts"
 
 import {
     async_impl as copyFile__async,
     sync_impl as copyFile__sync
-} from "../../../methods/copyFile.mts"
+} from "#~src/methods/copyFile.mts"
 
 import {
     async_impl as lstat__async,
     sync_impl as lstat__sync
-} from "../../../methods/lstat.mts"
+} from "#~src/methods/lstat.mts"
 
 import {
     async_impl as mkdir__async,
     sync_impl as mkdir__sync
-} from "../../../methods/mkdir.mts"
+} from "#~src/methods/mkdir.mts"
 
 import {
     async_impl as openDirectory__async,
     sync_impl as openDirectory__sync
-} from "../../../methods/openDirectory.mts"
+} from "#~src/methods/openDirectory.mts"
 
 import {
     async_impl as openFile__async,
     sync_impl as openFile__sync
-} from "../../../methods/openFile.mts"
+} from "#~src/methods/openFile.mts"
 
 import {
     async_impl as readFile__async,
     sync_impl as readFile__sync
-} from "../../../methods/readFile.mts"
+} from "#~src/methods/readFile.mts"
 
 import {
     async_impl as readdir__async,
     sync_impl as readdir__sync
-} from "../../../methods/readdir.mts"
+} from "#~src/methods/readdir.mts"
 
 import {
     async_impl as readlink__async,
     sync_impl as readlink__sync
-} from "../../../methods/readlink.mts"
+} from "#~src/methods/readlink.mts"
 
 import {
     async_impl as realpath__async,
     sync_impl as realpath__sync
-} from "../../../methods/realpath.mts"
+} from "#~src/methods/realpath.mts"
 
 import {
     async_impl as rename__async,
     sync_impl as rename__sync
-} from "../../../methods/rename.mts"
+} from "#~src/methods/rename.mts"
 
 import {
     async_impl as rmdir__async,
     sync_impl as rmdir__sync
-} from "../../../methods/rmdir.mts"
+} from "#~src/methods/rmdir.mts"
 
 import {
     async_impl as stat__async,
     sync_impl as stat__sync
-} from "../../../methods/stat.mts"
+} from "#~src/methods/stat.mts"
 
 import {
     async_impl as symlink__async,
     sync_impl as symlink__sync
-} from "../../../methods/symlink.mts"
+} from "#~src/methods/symlink.mts"
 
 import {
     async_impl as unlink__async,
     sync_impl as unlink__sync
-} from "../../../methods/unlink.mts"
+} from "#~src/methods/unlink.mts"
 
 import {
     async_impl as writeFile__async,
     sync_impl as writeFile__sync
-} from "../../../methods/writeFile.mts"
+} from "#~src/methods/writeFile.mts"
 
 
 
