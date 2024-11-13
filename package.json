@@ -1,7 +1,7 @@
 {
   "name": "@anio-fs/api",
   "type": "module",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "Async/sync API for node's filesystem api.",
   "exports": {
     ".": {
