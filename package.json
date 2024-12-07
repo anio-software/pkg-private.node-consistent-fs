@@ -1,6 +1,12 @@
 {
   "name": "@aniojs-private/node-async-sync-fs",
   "type": "module",
+  "author": "Anio Software <info@anio.software>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniojs-private-org/node-async-sync-fs.git"
+  },
   "version": "11.0.0",
   "description": "Async/sync API for node's filesystem api.",
   "exports": {
@@ -16,12 +22,6 @@
       "types": "./dist/sync/index.min.d.mts",
       "import": "./dist/sync/index.min.mjs"
     }
-  },
-  "author": "Anio Software <info@anio.software>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aniojs-private-org/node-async-sync-fs.git"
   },
   "devDependencies": {
     "@fourtune/core": "^0.1101.0",
