@@ -1,6 +1,6 @@
 {
   "name": "@aniojs-private/node-async-sync-fs",
-  "version": "11.0.0",
+  "version": "0.0.0",
   "type": "module",
   "author": "Anio Software <info@anio.software>",
   "license": "MIT",
