@@ -5,16 +5,16 @@
   "description": "Async/sync API for node's filesystem api.",
   "exports": {
     ".": {
-      "import": "./dist/default/index.min.mjs",
-      "types": "./dist/default/index.d.mts"
+      "types": "./dist/default/index.d.mts",
+      "import": "./dist/default/index.min.mjs"
     },
     "./async": {
-      "import": "./dist/async/index.min.mjs",
-      "types": "./dist/async/index.d.mts"
+      "types": "./dist/async/index.d.mts",
+      "import": "./dist/async/index.min.mjs"
     },
     "./sync": {
-      "import": "./dist/sync/index.min.mjs",
-      "types": "./dist/sync/index.d.mts"
+      "types": "./dist/sync/index.d.mts",
+      "import": "./dist/sync/index.min.mjs"
     }
   },
   "author": "Anio Software <info@anio.software>",
