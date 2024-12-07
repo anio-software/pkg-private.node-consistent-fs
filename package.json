@@ -1,5 +1,5 @@
 {
-  "name": "@anio-fs/api",
+  "name": "@aniojs-private/node-async-sync-fs",
   "type": "module",
   "version": "11.0.0",
   "description": "Async/sync API for node's filesystem api.",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anio-fs-org/api.git"
+    "url": "git+https://github.com/aniojs-private-org/node-async-sync-fs.git"
   },
   "devDependencies": {
     "@fourtune/core": "^0.1101.0",
