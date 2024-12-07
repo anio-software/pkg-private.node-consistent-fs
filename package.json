@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@fourtune/core": "^0.1101.0",
-    "@fourtune/realm-js": "^0.30000.1",
+    "@fourtune/realm-js": "^0.30000.2",
     "fourtune": "^0.30000.0"
   },
   "scripts": {
