@@ -3,7 +3,11 @@ import generateExportFile from "./generateExportFile.mjs"
 export default {
 	realm: {
 		name: "js",
-		type: "package"
+		type: "package",
+
+		options: {
+			runtime: "node"
+		}
 	},
 
 	autogenerate: {
