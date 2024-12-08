@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(path : string, data : Buffer|string) : void {
+export function sync_impl(path : string, data : Buffer|string) : undefined {
 	fs.writeFileSync(path, data)
 }
 

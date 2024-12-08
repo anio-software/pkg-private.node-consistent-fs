@@ -10,7 +10,7 @@ export function sync_impl(path : string, flags : string = "r", mode : number = 0
 		write(buffer : Buffer) {
 			return fs.writeSync(fd, buffer)
 		},
-		close() : void {
+		close() : undefined {
 			fs.closeSync(fd)
 		}
 	}
@@ -30,7 +30,7 @@ export async function async_impl(path : string, flags : string = "r", mode : num
 
 			return bytesWritten
 		},
-		async close() : Promise<void> {
+		async close() : Promise<undefined> {
 			await handle.close()
 		}
 	}

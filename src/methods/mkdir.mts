@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(path : string, options = null) : void {
+export function sync_impl(path : string, options = null) : undefined {
 	if (options === null) {
 		fs.mkdirSync(path)
 	} else {

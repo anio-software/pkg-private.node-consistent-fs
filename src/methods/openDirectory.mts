@@ -7,7 +7,7 @@ export function sync_impl(path : string) {
 		read() : fs.Dirent | null {
 			return handle.readSync()
 		},
-		close() : void {
+		close() : undefined {
 			handle.closeSync()
 		}
 	}
@@ -20,7 +20,7 @@ export async function async_impl(path : string) {
 		async read() : Promise<fs.Dirent | null> {
 			return await handle.read()
 		},
-		async close() : Promise<void> {
+		async close() : Promise<undefined> {
 			await handle.close()
 		}
 	}

@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(path : string, uid : number, gid : number) : void {
+export function sync_impl(path : string, uid : number, gid : number) : undefined {
 	fs.chownSync(path, uid, gid)
 }
 
