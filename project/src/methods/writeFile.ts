@@ -20,7 +20,7 @@ export async function asyncImplementation(
 	options?: {
 		mode?: number
 	}
-): Promise<ReturnType<typeof sync_impl>> {
+): Promise<ReturnType<typeof syncImplementation>> {
 	const mode = options?.mode ?? defaultMode
 
 	await fs.promises.writeFile(path, data, {mode})

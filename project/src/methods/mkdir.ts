@@ -8,7 +8,10 @@ export function syncImplementation(path: string, options?: fs.MakeDirectoryOptio
 	}
 }
 
-export async function asyncImplementation(path: string, options?: fs.MakeDirectoryOptions): Promise<ReturnType<typeof sync_impl>> {
+export async function asyncImplementation(
+	path: string,
+	options?: fs.MakeDirectoryOptions
+): Promise<ReturnType<typeof syncImplementation>> {
 	if (typeof options === "undefined") {
 		await fs.promises.mkdir(path)
 	} else {

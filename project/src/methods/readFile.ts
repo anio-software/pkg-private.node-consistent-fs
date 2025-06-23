@@ -4,6 +4,8 @@ export function syncImplementation(path: string): Buffer {
 	return fs.readFileSync(path)
 }
 
-export async function asyncImplementation(path: string): Promise<ReturnType<typeof sync_impl>> {
+export async function asyncImplementation(
+	path: string
+): Promise<ReturnType<typeof syncImplementation>> {
 	return await fs.promises.readFile(path)
 }

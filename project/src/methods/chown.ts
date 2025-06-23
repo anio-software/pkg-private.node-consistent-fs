@@ -4,6 +4,10 @@ export function syncImplementation(path: string, uid: number, gid: number): unde
 	fs.chownSync(path, uid, gid)
 }
 
-export async function asyncImplementation(path: string, uid: number, gid: number): Promise<ReturnType<typeof sync_impl>> {
+export async function asyncImplementation(
+	path: string,
+	uid: number,
+	gid: number
+): Promise<ReturnType<typeof syncImplementation>> {
 	await fs.promises.chown(path, uid, gid)
 }
