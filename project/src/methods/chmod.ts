@@ -1,9 +1,9 @@
 import fs from "node:fs"
 
-export function sync_impl(path : string, mode : number) : undefined {
+export function sync_impl(path: string, mode: number): undefined {
 	fs.chmodSync(path, mode)
 }
 
-export async function async_impl(path : string, mode : number) : Promise<ReturnType<typeof sync_impl>> {
+export async function async_impl(path: string, mode: number): Promise<ReturnType<typeof sync_impl>> {
 	await fs.promises.chmod(path, mode)
 }

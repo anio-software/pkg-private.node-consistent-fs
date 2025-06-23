@@ -1,26 +1,26 @@
 import fs from "node:fs"
 
-export function sync_impl(path : string) {
+export function sync_impl(path: string) {
 	const handle = fs.opendirSync(path)
 
 	return {
-		read() : fs.Dirent | null {
+		read(): fs.Dirent | null {
 			return handle.readSync()
 		},
-		close() : undefined {
+		close(): undefined {
 			handle.closeSync()
 		}
 	}
 }
 
-export async function async_impl(path : string) {
+export async function async_impl(path: string) {
 	const handle = await fs.promises.opendir(path)
 
 	return {
-		async read() : Promise<fs.Dirent | null> {
+		async read(): Promise<fs.Dirent | null> {
 			return await handle.read()
 		},
-		async close() : Promise<undefined> {
+		async close(): Promise<undefined> {
 			await handle.close()
 		}
 	}

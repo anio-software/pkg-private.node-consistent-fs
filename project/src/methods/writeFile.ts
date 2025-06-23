@@ -8,7 +8,7 @@ export function sync_impl(
 	options?: {
 		mode?: number
 	}
-) : undefined {
+): undefined {
 	const mode = options?.mode ?? defaultMode
 
 	fs.writeFileSync(path, data, {mode})
@@ -20,7 +20,7 @@ export async function async_impl(
 	options?: {
 		mode?: number
 	}
-) : Promise<ReturnType<typeof sync_impl>> {
+): Promise<ReturnType<typeof sync_impl>> {
 	const mode = options?.mode ?? defaultMode
 
 	await fs.promises.writeFile(path, data, {mode})
