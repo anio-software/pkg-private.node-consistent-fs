@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(src: string, dest: string): undefined {
+export function syncImplementation(src: string, dest: string): undefined {
 	fs.renameSync(src, dest)
 }
 

@@ -2,7 +2,7 @@ import fs from "node:fs"
 
 const defaultMode = 0o666
 
-export function sync_impl(
+export function syncImplementation(
 	path: string,
 	data: Buffer|string,
 	options?: {

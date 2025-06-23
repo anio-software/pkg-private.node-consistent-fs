@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(target: string, path: string): undefined {
+export function syncImplementation(target: string, path: string): undefined {
 	fs.symlinkSync(target, path)
 }
 

@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(path: string, flags: string = "r", mode: number = 0o666) {
+export function syncImplementation(path: string, flags: string = "r", mode: number = 0o666) {
 	const fd = fs.openSync(path, flags, mode)
 
 	return {

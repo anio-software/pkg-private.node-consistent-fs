@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(path: string): Buffer {
+export function syncImplementation(path: string): Buffer {
 	return fs.readFileSync(path)
 }
 

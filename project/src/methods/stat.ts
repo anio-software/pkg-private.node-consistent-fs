@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(path: string): fs.Stats {
+export function syncImplementation(path: string): fs.Stats {
 	return fs.statSync(path)
 }
 

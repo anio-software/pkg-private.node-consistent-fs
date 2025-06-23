@@ -1,6 +1,6 @@
 import fs from "node:fs"
 
-export function sync_impl(path: string) {
+export function syncImplementation(path: string) {
 	const handle = fs.opendirSync(path)
 
 	return {
