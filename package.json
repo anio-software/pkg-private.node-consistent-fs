@@ -23,11 +23,6 @@
     "url": "git+https://github.com/anio-software/pkg-private.node-consistent-fs.git"
   },
   "type": "module",
-  "devDependencies": {
-    "@fourtune/core": "^0.1101.0",
-    "@fourtune/realm-js": "^0.31000.5",
-    "fourtune": "^0.30000.1"
-  },
   "peerDependencies": {
     "@types/node": ">=22.7.x"
   },
