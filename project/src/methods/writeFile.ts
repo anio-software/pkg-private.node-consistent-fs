@@ -14,7 +14,7 @@ export function syncImplementation(
 	fs.writeFileSync(path, data, {mode})
 }
 
-export async function async_impl(
+export async function asyncImplementation(
 	path: string,
 	data: Buffer|string,
 	options?: {

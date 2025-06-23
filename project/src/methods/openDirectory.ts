@@ -13,7 +13,7 @@ export function syncImplementation(path: string) {
 	}
 }
 
-export async function async_impl(path: string) {
+export async function asyncImplementation(path: string) {
 	const handle = await fs.promises.opendir(path)
 
 	return {

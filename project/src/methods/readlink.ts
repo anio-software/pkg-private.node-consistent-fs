@@ -4,6 +4,6 @@ export function syncImplementation(path: string): string {
 	return fs.readlinkSync(path)
 }
 
-export async function async_impl(path: string): Promise<ReturnType<typeof sync_impl>> {
+export async function asyncImplementation(path: string): Promise<ReturnType<typeof sync_impl>> {
 	return await fs.promises.readlink(path)
 }

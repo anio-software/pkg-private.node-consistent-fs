@@ -16,7 +16,7 @@ export function syncImplementation(path: string, flags: string = "r", mode: numb
 	}
 }
 
-export async function async_impl(path: string, flags: string = "r", mode: number = 0o666) {
+export async function asyncImplementation(path: string, flags: string = "r", mode: number = 0o666) {
 	const handle = await fs.promises.open(path, flags, mode)
 
 	return {
