@@ -1,0 +1,5 @@
+# This file is automatically managed by enkore
+# DO NOT ADD ENTRIES HERE, THEY WILL BE REMOVED
+/export/async/__aggregatedExports.ts
+/export/sync/__aggregatedExports.ts
+/export/default/__aggregatedExports.ts
